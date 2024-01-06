@@ -1,4 +1,10 @@
 # yaml for axolotl to train llama
+#
+# tutorial1: https://duarteocarmo.com/blog/fine-tune-llama-2-telegram
+# tutorial2: https://www.datacamp.com/tutorial/fine-tuning-llama-2
+#
+# vast.ai: 48G VRAM; 200G Disk; custom dock template: winglian/axolotl:main-py3.10-cu118-2.0.1
+#
 base_model: meta-llama/Llama-2-7b-hf
 base_model_config: meta-llama/Llama-2-7b-hf
 model_type: LlamaForCausalLM
@@ -62,6 +68,7 @@ flash_attention: true
 warmup_steps: 10
 eval_steps: 20
 eval_table_size: 5
+eval_sample_packing: false
 save_steps:
 debug:
 deepspeed:
